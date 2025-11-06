@@ -27,10 +27,10 @@
 - 🍴 **맛집**: 한식, 중식, 일식, 양식, 현지음식 등
 - 💰 **예산**: 저렴, 보통, 고급
 
-### 4. 구글 맵 경로 시각화
+### 4. 카카오맵 경로 시각화
 - 출발지에서 목적지까지의 경로 시각화
 - 선택한 관광지와 맛집을 경유지로 표시
-- 실시간 경로 안내
+- 마커와 폴리라인을 통한 경로 표시
 
 ## 🚀 시작하기
 
@@ -56,17 +56,18 @@ npm install
 cp .env.example .env
 ```
 
-`.env` 파일을 열고 Google Maps API 키를 입력하세요:
+`.env` 파일을 열고 Kakao Map API 키를 입력하세요:
 ```
-REACT_APP_GOOGLE_MAPS_API_KEY=your_api_key_here
+VITE_KAKAO_MAP_API_KEY=your_api_key_here
 ```
 
-Google Maps API 키 발급 방법:
-1. [Google Cloud Console](https://console.cloud.google.com/)에 접속
-2. 새 프로젝트 생성 또는 기존 프로젝트 선택
-3. "APIs & Services" > "Library"로 이동
-4. "Maps JavaScript API"와 "Directions API" 활성화
-5. "Credentials"에서 API 키 생성
+Kakao Map API 키 발급 방법:
+1. [카카오 개발자 센터](https://developers.kakao.com/)에 접속
+2. "내 애플리케이션"으로 이동
+3. "애플리케이션 추가하기" 클릭
+4. 앱 설정 > 플랫폼 > Web 플랫폼 등록
+5. 사이트 도메인 입력 (로컬 개발: http://localhost:5173)
+6. 앱 키 > JavaScript 키 복사
 
 ### 개발 서버 실행
 
@@ -105,7 +106,7 @@ npm run build
 <img src="docs/step3.png" alt="결과 확인" width="600">
 
 - 왼쪽: 대중교통 옵션과 추천 장소
-- 오른쪽: 구글 맵 경로 시각화
+- 오른쪽: 카카오맵 경로 시각화
 - 장소를 클릭하여 여행 경로에 추가
 
 ## 🏗️ 프로젝트 구조
@@ -116,7 +117,7 @@ solideo_Day2_10_01_practice2/
 │   ├── components/          # React 컴포넌트
 │   │   ├── TravelInputForm.tsx
 │   │   ├── TransportationSearch.tsx
-│   │   ├── GoogleMapView.tsx
+│   │   ├── KakaoMapView.tsx
 │   │   ├── RecommendationsPanel.tsx
 │   │   └── PreferencesForm.tsx
 │   ├── services/            # API 서비스
@@ -138,7 +139,7 @@ solideo_Day2_10_01_practice2/
 
 - **Frontend**: React 18 + TypeScript
 - **Build Tool**: Vite
-- **Maps**: Google Maps JavaScript API
+- **Maps**: Kakao Maps JavaScript API
 - **UI**: Custom CSS with Gradient Design
 - **State Management**: React Hooks (useState, useEffect)
 
@@ -156,7 +157,7 @@ solideo_Day2_10_01_practice2/
 - **맛집**: 카카오 로컬 API, 네이버 플레이스 API
 
 ### 지도 API
-- **Google Maps**: Directions API, Places API, Geocoding API
+- **Kakao Map**: 지도 API, 로컬 API (장소 검색)
 
 ## 📝 향후 개선 사항
 

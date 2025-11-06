@@ -466,8 +466,8 @@ body {
   color: #666;
 }
 
-/* Google Map */
-.google-map-container {
+/* Kakao Map */
+.kakao-map-container {
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 20px;

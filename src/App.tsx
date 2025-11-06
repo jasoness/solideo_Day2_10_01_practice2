@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TravelInputForm } from './components/TravelInputForm';
 import { TransportationSearch } from './components/TransportationSearch';
-import { GoogleMapView } from './components/GoogleMapView';
+import { KakaoMapView } from './components/KakaoMapView';
 import { RecommendationsPanel } from './components/RecommendationsPanel';
 import { PreferencesForm } from './components/PreferencesForm';
 import { TravelInput, TransportOption, Recommendation, UserPreferences, Location } from './types';
@@ -16,7 +16,7 @@ function App() {
     foodPreferences: [],
     budget: 'medium'
   });
-  const [selectedTransport, setSelectedTransport] = useState<TransportOption | null>(null);
+  const [_selectedTransport, setSelectedTransport] = useState<TransportOption | null>(null);
   const [selectedPlaces, setSelectedPlaces] = useState<Recommendation[]>([]);
   const [originLocation, setOriginLocation] = useState<Location | null>(null);
   const [destinationLocation, setDestinationLocation] = useState<Location | null>(null);
@@ -123,7 +123,7 @@ function App() {
               </div>
 
               <div className="right-panel">
-                <GoogleMapView
+                <KakaoMapView
                   origin={originLocation}
                   destination={destinationLocation}
                   waypoints={selectedPlaces.map(p => p.location)}

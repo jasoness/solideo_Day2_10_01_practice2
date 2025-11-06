@@ -21,7 +21,7 @@ export const geocodeAddress = async (address: string): Promise<Location> => {
 export const searchTransportation = async (
   departure: string,
   arrival: string,
-  date: string
+  _date: string
 ): Promise<TransportOption[]> => {
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 1000));

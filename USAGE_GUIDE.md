@@ -167,9 +167,9 @@ localhost:5173
 
 ## 🔧 추가 설정
 
-### Google Maps API 키 설정 (선택사항)
+### Kakao Map API 키 설정 (선택사항)
 
-실제 구글 맵을 표시하려면:
+실제 카카오맵을 표시하려면:
 
 1. `.env` 파일 생성
 ```bash
@@ -178,17 +178,19 @@ cp .env.example .env
 
 2. `.env` 파일 편집
 ```env
-REACT_APP_GOOGLE_MAPS_API_KEY=your_actual_api_key_here
+VITE_KAKAO_MAP_API_KEY=your_actual_api_key_here
 ```
 
-3. Google Maps API 키 발급
-   - [Google Cloud Console](https://console.cloud.google.com/) 접속
-   - 프로젝트 생성
-   - APIs & Services > Library
-   - "Maps JavaScript API" 활성화
-   - "Directions API" 활성화
-   - Credentials에서 API 키 생성
-   - 생성된 키를 `.env` 파일에 붙여넣기
+3. Kakao Map API 키 발급
+   - [카카오 개발자 센터](https://developers.kakao.com/) 접속
+   - 로그인 후 "내 애플리케이션" 메뉴로 이동
+   - "애플리케이션 추가하기" 클릭
+   - 앱 이름 입력 후 저장
+   - 생성된 앱 선택
+   - "앱 설정" > "플랫폼" > "Web 플랫폼 등록" 클릭
+   - 사이트 도메인 입력: `http://localhost:5173`
+   - "앱 키" 메뉴에서 "JavaScript 키" 복사
+   - 복사한 키를 `.env` 파일에 붙여넣기
 
 4. 서버 재시작
 ```bash
