@@ -1,6 +1,13 @@
 # ✈️ 여행 개인화 앱
 
+[![CI](https://github.com/jasoness/solideo_Day2_10_01_practice2/actions/workflows/ci.yml/badge.svg)](https://github.com/jasoness/solideo_Day2_10_01_practice2/actions/workflows/ci.yml)
+[![Deploy](https://github.com/jasoness/solideo_Day2_10_01_practice2/actions/workflows/static.yml/badge.svg)](https://github.com/jasoness/solideo_Day2_10_01_practice2/actions/workflows/static.yml)
+
 대중교통을 연계하여 맞춤형 여행 계획을 세울 수 있는 웹 애플리케이션입니다.
+
+## 🌐 라이브 데모
+
+GitHub Pages에서 앱을 직접 사용해보세요: [https://jasoness.github.io/solideo_Day2_10_01_practice2/](https://jasoness.github.io/solideo_Day2_10_01_practice2/)
 
 ## 🌟 주요 기능
 
@@ -146,6 +153,41 @@ solideo_Day2_10_01_practice2/
 ### 지도 API
 - **OpenStreetMap**: 오픈소스 지도 데이터 (API 키 불필요)
 - **Leaflet**: 인터랙티브 지도 라이브러리
+
+## 🚀 GitHub Actions CI/CD
+
+이 프로젝트는 GitHub Actions를 사용하여 자동 빌드 및 배포를 수행합니다.
+
+### Workflows
+
+#### 1. CI (Continuous Integration)
+- **파일**: `.github/workflows/ci.yml`
+- **트리거**: 모든 push 및 pull request
+- **작업**:
+  - Node.js 18.x, 20.x 환경에서 테스트
+  - 의존성 설치 (`npm ci`)
+  - 프로젝트 빌드 (`npm run build`)
+  - 빌드 결과 검증
+
+#### 2. Deploy (Continuous Deployment)
+- **파일**: `.github/workflows/static.yml`
+- **트리거**: main, master, 또는 현재 브랜치에 push
+- **작업**:
+  - 프로젝트 빌드
+  - GitHub Pages에 자동 배포
+
+### GitHub Pages 설정
+
+1. **Repository Settings** → **Pages** 이동
+2. **Source**: GitHub Actions 선택
+3. 코드를 push하면 자동으로 배포됩니다!
+
+### 배포 URL
+
+앱은 다음 주소에서 접근 가능합니다:
+```
+https://jasoness.github.io/solideo_Day2_10_01_practice2/
+```
 
 ## 📝 향후 개선 사항
 
