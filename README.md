@@ -27,10 +27,12 @@
 - 🍴 **맛집**: 한식, 중식, 일식, 양식, 현지음식 등
 - 💰 **예산**: 저렴, 보통, 고급
 
-### 4. 카카오맵 경로 시각화
+### 4. 오픈소스 지도 경로 시각화 (API 키 불필요!)
+- OpenStreetMap + Leaflet 사용
 - 출발지에서 목적지까지의 경로 시각화
 - 선택한 관광지와 맛집을 경유지로 표시
 - 마커와 폴리라인을 통한 경로 표시
+- **API 키 없이 무료로 사용 가능**
 
 ## 🚀 시작하기
 
@@ -51,23 +53,8 @@ cd solideo_Day2_10_01_practice2
 npm install
 ```
 
-3. 환경 변수 설정
-```bash
-cp .env.example .env
-```
-
-`.env` 파일을 열고 Kakao Map API 키를 입력하세요:
-```
-VITE_KAKAO_MAP_API_KEY=your_api_key_here
-```
-
-Kakao Map API 키 발급 방법:
-1. [카카오 개발자 센터](https://developers.kakao.com/)에 접속
-2. "내 애플리케이션"으로 이동
-3. "애플리케이션 추가하기" 클릭
-4. 앱 설정 > 플랫폼 > Web 플랫폼 등록
-5. 사이트 도메인 입력 (로컬 개발: http://localhost:5173)
-6. 앱 키 > JavaScript 키 복사
+**참고**: 이 앱은 OpenStreetMap과 Leaflet을 사용하므로 **API 키가 전혀 필요하지 않습니다!**
+바로 다음 단계로 진행하세요.
 
 ### 개발 서버 실행
 
@@ -117,7 +104,7 @@ solideo_Day2_10_01_practice2/
 │   ├── components/          # React 컴포넌트
 │   │   ├── TravelInputForm.tsx
 │   │   ├── TransportationSearch.tsx
-│   │   ├── KakaoMapView.tsx
+│   │   ├── LeafletMapView.tsx
 │   │   ├── RecommendationsPanel.tsx
 │   │   └── PreferencesForm.tsx
 │   ├── services/            # API 서비스
@@ -139,7 +126,7 @@ solideo_Day2_10_01_practice2/
 
 - **Frontend**: React 18 + TypeScript
 - **Build Tool**: Vite
-- **Maps**: Kakao Maps JavaScript API
+- **Maps**: Leaflet + OpenStreetMap (API 키 불필요!)
 - **UI**: Custom CSS with Gradient Design
 - **State Management**: React Hooks (useState, useEffect)
 
@@ -157,7 +144,8 @@ solideo_Day2_10_01_practice2/
 - **맛집**: 카카오 로컬 API, 네이버 플레이스 API
 
 ### 지도 API
-- **Kakao Map**: 지도 API, 로컬 API (장소 검색)
+- **OpenStreetMap**: 오픈소스 지도 데이터 (API 키 불필요)
+- **Leaflet**: 인터랙티브 지도 라이브러리
 
 ## 📝 향후 개선 사항
 

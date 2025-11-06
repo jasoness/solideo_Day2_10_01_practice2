@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { TravelInputForm } from './components/TravelInputForm';
 import { TransportationSearch } from './components/TransportationSearch';
-import { KakaoMapView } from './components/KakaoMapView';
+import { LeafletMapView } from './components/LeafletMapView';
 import { RecommendationsPanel } from './components/RecommendationsPanel';
 import { PreferencesForm } from './components/PreferencesForm';
 import { TravelInput, TransportOption, Recommendation, UserPreferences, Location } from './types';
@@ -123,7 +123,7 @@ function App() {
               </div>
 
               <div className="right-panel">
-                <KakaoMapView
+                <LeafletMapView
                   origin={originLocation}
                   destination={destinationLocation}
                   waypoints={selectedPlaces.map(p => p.location)}

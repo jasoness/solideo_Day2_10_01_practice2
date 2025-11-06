@@ -466,11 +466,23 @@ body {
   color: #666;
 }
 
-/* Kakao Map */
-.kakao-map-container {
-  border-radius: 12px;
-  overflow: hidden;
+/* Leaflet Map */
+.leaflet-map-container {
   margin-bottom: 20px;
+}
+
+.map-info-box {
+  background: #f8f9ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.map-info-box p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9rem;
 }
 
 .map-placeholder {
